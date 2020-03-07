@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>3 Match</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
+		<meta name="theme-color" content="#ffffff">
+		<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- JQuery JS -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jcanvas.min.js"></script>
+		<script src="js/vkconnect.min.js"></script>
+
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Ruslan+Display&display=swap');
+			body,.game {
+				min-height: 100vh;
+				max-height: 100vh;
+				min-width: 100vw;
+				max-width: 100vw;
+				overflow: hidden;
+			}
+			.font-0 {
+				font-family: 'Ruslan Display', 'monospace';
+			}
+		</style>
+	</head>
+	<body style="background:url(img/bg.jpg); background-position: cover;">
+		<div class="col-12 d-md-none pt-5"></div>
+		<div class="game position-absolute text-center">
+			<div class="col-12 d-md-none pt-4"></div>
+			<div class="col-12 col-md-4 mx-auto">
+				<p id="3matchScore" class="col-12 h1 my-3 text-white font-0">Score: 0</p>
+				<canvas id="3matchGameBox" style="width: 100%;"></canvas>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var customNumberOfTiles_3match = 5;
+
+			$('#3matchGameBox').on('3match_gameOver',function(){
+				alert('Game Over');
+			}).on('3match_updateScore',function(e,data){
+				$('#3matchScore').text('Score: '+(data.score / 10));
+			}).on('3match_updateCombo',function(e,combo){
+				//
+			}).on('3match_gameEnd',function(e,data){
+				alert('Game Over\nYour Score: '+(data.score / 10));
+			});
+
+			send('VKWebAppInit', {});
+			send("VKWebAppSetViewSettings", {
+				"status_bar_style": "light",
+				"action_bar_color": "#000"
+			});
+		</script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
