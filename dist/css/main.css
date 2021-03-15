@@ -1,0 +1,137 @@
+@font-face {
+	font-family: SFLight;
+	src: url(../fonts/SFUIText-Light.ttf) format('truetype');
+	font-weight: 400;
+	font-style: normal
+}
+
+body {
+	font-family: SFLight;
+	min-width: 100vw;
+	max-width: 100vw;
+	/*min-height: 100vh;
+	max-height: 100vh;
+	overflow: hidden;*/
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+a:active,
+a:focus/*,
+a:hover*/ {
+	text-decoration: none
+}
+
+.cnt {
+	min-width: 100vw;
+	max-width: 100vw;
+	min-height: 100vh;
+	max-height: 100vh;
+	overflow-y: scroll;
+	overflow-x: hidden
+}
+
+section {
+	border-bottom: #01963A;
+}
+
+.bg-reso {
+	background: #01963A;
+}
+.text-reso {
+	color: #01963A;
+}
+.border-reso {
+	border-color:#01963A!important;
+}
+.reso-shadow {
+	box-shadow: 0 0 10px 0 #01963A;
+}
+
+.card-title {
+	cursor: pointer;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+	height: 0
+}
+
+::-webkit-scrollbar-button {
+	width: 0;
+	height: 0
+}
+
+::-webkit-scrollbar-thumb {
+	background: 0 0;
+	border: 0 none transparent;
+	border-radius: 50px
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: 0 0
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: 0 0
+}
+
+::-webkit-scrollbar-track {
+	background: 0 0;
+	border: 0 none transparent;
+	border-radius: 50px
+}
+
+::-webkit-scrollbar-track:hover {
+	background: 0 0
+}
+
+::-webkit-scrollbar-track:active {
+	background: 0 0
+}
+
+::-webkit-scrollbar-corner {
+	background: 0 0
+}
+
+#overlay {
+	min-width: 100vw;
+	min-height: 100vh;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 1000;
+	position: absolute;
+	left: 0;
+	top: 0
+}
+
+#overlay>div>div {
+	bottom: 0;
+	border-radius: .75rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .5)
+}
+
+#overlay-inner {
+	max-height: 80vh;
+	overflow-y: scroll
+}
+
+#notify {
+	top: 0;
+	left: 0;
+	z-index: 2000
+}
+
+#notify>div {
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+	display: none;
+	max-height: 20vh
+}
+
+.grecaptcha-badge {
+	display: none !important;
+}
